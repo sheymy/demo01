@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="DemoWeb01.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title> Sistema Base Pachacamac</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{margin:0;padding:0;height:100vh}
+        table{width:100%;height:100%;border:dotted}
+        th{background-color:aqua;height:90px}
+        td.Col1{width:15%;background-color:green}
+        td.Col2{width:85%; background-color:yellow}
+        tr,td,th{border:1px solid #ff0000;padding:8px;text-align:left}
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table>
+        <tr>
+            <th colspan="2">Pagina Principal</th>
+        </tr>
+        <tr>
+            <td class="Col1" > 
+                <nav>
+                         <h2>Menù</h2>
+                        <ul>
+                            <li><a href="FrmClientes.aspx">Clientes</a></li>
+                            <li><a href="frmProductos.aspx">Productos</a></li>
+                            <li><a href="abc">Configuracion</a></li>
+                        </ul>
+                    </nav>
+            </td>
+            <td class="Col2"> 
+                 <section>
+                        <h1>Contenido Formulario</h1>
+                        <p> Contenido de la pagina </p>
+                     
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+                        </asp:ContentPlaceHolder>
+
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+               
+                        </asp:ContentPlaceHolder>
+
+                    </section>
+
+            </td>
+        </tr>
+    </table>
+
+
+
+        
+      </form>  
+        
+            
+
+
+</body>
+</html>
